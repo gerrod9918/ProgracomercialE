@@ -11,7 +11,7 @@ def listar_pub(request):
 
 def detalle_pub(request, pk):
     p = get_object_or_404(Publicacion, pk=pk)
-    return render(request, 'blog/detalle_pub.html', {'p':p})
+    return render(request, 'blog/detalle_pub.html', {'pubs':p})
 
 def nueva_pub(request):
     if request.method == "POST":
